@@ -4,7 +4,7 @@ import com.akua.Algorithms;
 
 public class MergeSort extends Algorithms {
 
-    public void mergeSort(int[] a, int n) {
+    public void sort(int[] a, int n) {
         if (n < 2)
             return;
 
@@ -20,13 +20,13 @@ public class MergeSort extends Algorithms {
         for (int i = mid; i < n; i++)
             r[i - mid] = a[i];
 
-        mergeSort(l, mid);
-        mergeSort(r, n - mid);
+        sort(l, mid);
+        sort(r, n - mid);
 
         merge(a, l, r, mid, n - mid);
     }
 
-    public void merge( int[] a, int[] l, int[] r, int left, int right) {
+    private void merge( int[] a, int[] l, int[] r, int left, int right) {
 
         int i = 0, j = 0, k = 0;
 

@@ -20,16 +20,13 @@ public class BubbleSort extends Algorithms{
         return arr;
     }
 	
-	public void bubble(int[] arr, int i) {
+	private void bubble(int[] arr, int i) {
         printSelected(arr, i, Algorithms.ANSI_RED);
 
         for (int j = 0; j < arr.length-1-i; j++) {
-            printSelected(arr,j, Algorithms.ANSI_YELLOW);
-
              if (arr[j] > arr[j + 1]) {
-                 int temp = arr[j];
-                 arr[j] = arr[j + 1];
-                 arr[j + 1] = temp;
+                 printSwaped(arr, j, j+1);
+                 swap(arr,j, j + 1);
              }
          }
 

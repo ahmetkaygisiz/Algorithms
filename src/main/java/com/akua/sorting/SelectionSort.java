@@ -19,7 +19,7 @@ public class SelectionSort extends Algorithms {
         return arr;
     }
 
-    public void selection(int arr[], int i){
+    private void selection(int arr[], int i){
         printSelected(arr, i, Algorithms.ANSI_RED);
         int min = i;
 
@@ -30,12 +30,9 @@ public class SelectionSort extends Algorithms {
         }
         System.out.println(" ");
 
-        int tmp = arr[min];
-        arr[min] = arr[i];
-        arr[i] = tmp;
+        swap(arr, min, i);
 
         printSelected(arr, i, ANSI_BLUE);
-
     }
 
 }

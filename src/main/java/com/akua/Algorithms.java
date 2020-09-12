@@ -17,4 +17,21 @@ public class Algorithms {
 				System.out.print(arr[i] + "  ");
 		System.out.println(" ");
 	}
+
+	public void printSwaped(int[] arr, int s1, int s2){
+		for(int i = 0; i < arr.length; i++)
+			if(i == s1)
+				System.out.print(ANSI_YELLOW +  arr[i] + ANSI_RESET + "  ");
+			else if (i == s2)
+				System.out.print(ANSI_RED +  arr[i] + ANSI_RESET + "  ");
+			else
+				System.out.print(arr[i] + "  ");
+		System.out.println(" ");
+	}
+
+	public void swap(int arr[], int i, int j){
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
 }

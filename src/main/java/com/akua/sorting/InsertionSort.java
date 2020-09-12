@@ -23,7 +23,7 @@ public class InsertionSort extends Algorithms {
 	}
 
 
-	public void insert(int[] arr, int i, int value) {
+	private void insert(int[] arr, int i, int value) {
 		printSelected(arr, i, Algorithms.ANSI_RED);
 		
 		for(int j = i - 1; j >= 0; j--){		// yerlestir.
