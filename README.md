@@ -1,28 +1,50 @@
 # Algoritmalar Cheat Sheet
   
   - Sorting Algoritms
-    - Bubble 
-    - Insertion 
-    - Shell 
-    - Selection 
-    - Heap 
-    - Merge 
-    - Quick 
-    - Bucket
-    
+    - Bubble ✓ 
+        - En iyi   : O(n^2) karşılaştırma, O(1) swap
+        - Ortalama : O(n^2) karşılaştırma ve swap
+        - En Kötü  : O(n^2) karşılaştırma ve swap
+    - Insertion ✓ 
+        - En iyi   : O(n) karşılaştırma, O(1) swap
+        - Ortalama : O(n^2) karşılaştırma ve swap
+        - En Kötü  : O(n^2) karşılaştırma, O(n^2) swap
+    - Shell ✓
+        - En iyi   : O(nlogn) karşılaştırma, O(1) swap
+        - En Kötü  : O(n^2)
+    - Selection ✓        
+        - En iyi   : O(n^2) karşılaştırma, O(1) swap
+        - Ortalama : O(n^2) karşılaştırma O(n) swap
+        - En Kötü  : O(n^2) karşılaştırma O(n) swap
+    - Heap ✓        
+        - En iyi   : O(nlogn)
+        - Ortalama : O(nlogn)
+        - En Kötü  : O(nlogn)
+    - Merge ✓ 
+        - En iyi   : O(nlogn) genelde, O(n) doğal
+        - Ortalama : O(nlogn)
+        - En Kötü  : O(nlogn)
+    - Quick ✓
+        - En iyi   : O(nlogn)
+        - Ortalama : O(nlogn)
+        - En Kötü  : O(n^2)
+    - Bucket ✓
+        - En iyi : O(n) => k ~ n iken
+        - Ortalama   : O(n + n^2/k + k)
+        - En Kötü  : O(n^2)
+        
   - Searching Algorithms
-    - Linear 
-    - Binary 
-    - Jump 
-    - Fibonacci 
-    - Interpolation 
-    - Exponential 
+    - Linear ✓
+    - Binary ✓
+    - Jump ✓
+    - Fibonacci ✓ 
+    - Interpolation ✓ 
+    - Exponential ✓
+     
   - Greedy Algorithms
-    -  
-
-    
-## Sorting Algorithms
-
-## Searching Algoritmhs
-
-## Greedy Algorithms
+    - Greedy Algorithm
+    - Ford-Fulkerson
+    - Dijkstra
+    - Kruskal
+    - Prim
+    - Huffman

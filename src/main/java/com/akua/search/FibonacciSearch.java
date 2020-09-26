@@ -16,9 +16,7 @@ import com.akua.Algorithms;
  */
 public class FibonacciSearch extends Algorithms {
 
-    public int findMin(int x, int y){
-        return (x <= y) ? x : y;
-    }
+
 
     public int[] findFibonacci(int arrLength){
         int[] fiboArr = new int[3];
@@ -62,8 +60,9 @@ public class FibonacciSearch extends Algorithms {
                 slideBackFibonacci(fiboArr,1);
                 offset = i;
             }
-            else if(arr[i] > wanted)
+            else if(arr[i] > wanted){
                 slideBackFibonacci(fiboArr,2);
+            }
             else{
                 printSelected(arr,i, ANSI_RED);
                 return i;

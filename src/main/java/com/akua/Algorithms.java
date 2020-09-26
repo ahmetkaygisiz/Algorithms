@@ -8,6 +8,10 @@ public class Algorithms {
 	public static final String ANSI_RESET 	= "\u001B[0m";
 
 
+	public int findMin(int x, int y){
+		return (x <= y) ? x : y;
+	}
+
 	// Biraz renk katmak gerek
 	public void printSelected(int[] arr, int selected, String ANSI_CODE) {
 		for (int i = 0; i < arr.length; i++)

@@ -1,9 +1,6 @@
 package com.akua;
 
-import com.akua.search.BinarySearch;
-import com.akua.search.FibonacciSearch;
-import com.akua.search.JumpSearch;
-import com.akua.search.LinearSearch;
+import com.akua.search.*;
 import com.akua.sorting.*;
 import com.sun.net.httpserver.Headers;
 //import com.akua.sorting.InsertionSort;
@@ -43,17 +40,31 @@ public class App
     }
 
     public static void searchAlgorithms(int[] arr,int wanted){
-  /*      BinarySearch bs = new BinarySearch();
-        System.out.println("index : " + bs.search(new BucketSort().sort(arr),0,arr.length-1, wanted) + "\n");
 
+        int[] sortedArray = new BucketSort().sort(arr);
+
+        BinarySearch bs = new BinarySearch();
+        int binarySIndex = bs.search(sortedArray,0,arr.length-1, wanted);
+        System.out.println("bsIndex = " + binarySIndex);
+        
         LinearSearch ls = new LinearSearch();
-        System.out.println("index : " + ls.search(arr, wanted) + "\n");
-
+        int linearSIndex = ls.search(arr, wanted);
+        System.out.println("linearSIndex = " + linearSIndex);
+        
         JumpSearch js = new JumpSearch();
-        System.out.println("index : " + js.search(new BucketSort().sort(arr), wanted));
-  */
+        int jumpSIndex = js.search(sortedArray, wanted);
+        System.out.println("jumpSIndex = " + jumpSIndex);
+        
         FibonacciSearch fs = new FibonacciSearch();
-        System.out.println("index : " + fs.search(new BucketSort().sort(arr), wanted));
-
+        int fiboSIndex = fs.search(sortedArray, wanted);
+        System.out.println("fiboSIndex = " + fiboSIndex);
+        
+        InterpolationSearch is = new InterpolationSearch();
+        int interpolationSIndex =is.search(sortedArray,wanted);
+        System.out.println("interpolationSIndex = " + interpolationSIndex);
+        
+        ExponentialSearch es = new ExponentialSearch();
+        int exponentialSIndex = es.search(sortedArray,wanted);
+        System.out.println("exponentialSIndex = " + exponentialSIndex);
     }
 }
